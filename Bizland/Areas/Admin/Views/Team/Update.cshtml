@@ -1,0 +1,29 @@
+﻿@using Bizland.Models;
+
+
+@model Team
+
+<div class="card-body">
+    <h4 class="card-title">Default form</h4>
+    <p class="card-description">
+        Basic form layout
+    </p>
+    <form class="forms-sample" method="post">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" asp-format="Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" asp-format="Description">
+        </div>
+        <div class="form-group">
+            <label asp-for="ImagePath"></label>
+            <input asp-for="ImagePath" class="form-control" asp-format="ImagePath">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button asp-controller="Team" asp-action="Index" class="btn btn-light">Cancel</button>
+    </form>
+</div>

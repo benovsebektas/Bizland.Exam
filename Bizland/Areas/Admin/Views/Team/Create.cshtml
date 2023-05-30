@@ -1,0 +1,28 @@
+﻿@using Bizland.ViewModel;
+
+@model TeamCreateVM
+
+<div class="card-body">
+    <h4 class="card-title">Default form</h4>
+    <p class="card-description">
+        Basic form layout
+    </p>
+    <form class="forms-sample" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" asp-format="Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" asp-format="Description">
+        </div>
+        <div class="form-group">
+            <label asp-for="Photo"></label>
+            <input asp-for="Photo" class="form-control" asp-format="Photo">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button asp-controller="Team" asp-action="Index" class="btn btn-light">Cancel</button>
+    </form>
+</div>
